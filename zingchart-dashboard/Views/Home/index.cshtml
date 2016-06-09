@@ -115,6 +115,15 @@
                                 Total Revenue
                             </td>
                         </tr>
+                        @foreach (dynamic plan in ViewBag.monthlyPlans)
+                        {
+                            <tr>
+                                <td>@plan.name</td>
+                                <td>@plan.users</td>
+                                <td>@("$" + plan.price)</td>
+                                <td>@("$" + plan.total)</td>
+                            </tr>
+                        }
                     </table>
                 </div>
             </div>
